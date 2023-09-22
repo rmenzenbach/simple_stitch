@@ -9,7 +9,7 @@ fn stitch(images: &Vec<image::DynamicImage>, gutters: u32) -> image::DynamicImag
     let mut stitched = image::DynamicImage::new_rgb8(width * images.len() as u32 + (images.len() - 1 ) as u32 * gutters, height);
     
     // Set all pixels to white using a mutable view
-    let mut view = stitched.as_mut_rgb8().unwrap();
+    let view = stitched.as_mut_rgb8().unwrap();
     for pixel in view.pixels_mut() {
         *pixel = image::Rgb([255, 255, 255]);
     }
