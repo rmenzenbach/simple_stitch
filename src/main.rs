@@ -45,7 +45,7 @@ fn main() {
     println!("Loaded {} images", images.len());
 
     // Stitch the images together
-    let stitched = stitch(&images, 64);
+    let stitched = stitch(&images, 16);
 
     // Save the stitched image
     stitched.save("stitched.png").unwrap();
